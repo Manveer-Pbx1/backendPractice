@@ -1,3 +1,3 @@
 # chai aur backend!
 Let's do backend with JavaScript
-- [Model Link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEZrMFZ4c2NRWTMxbV9nTmhKM1lNbXJsN29SZ3xBQ3Jtc0tsUDBLMTZkWkJ6d19JaFVkWmdBZTVRLTgxbDVud29mSUNoUkwxYlU0aXA2ZUNGTzZOVzEzZEc4eklZQVR0Vm1yR1doYndDN2pRUU9rRmp1bk1FTHJJLTktZ1M1UnNVSGdMbVBHblNfNUo1WlFMcTB6WQ&q=https%3A%2F%2Fapp.eraser.io%2Fworkspace%2FYtPqZ1VogxGy1jzIDkzj%3Forigin%3Dshare&v=9B4CvtzXRpc)
+- [Model Link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
