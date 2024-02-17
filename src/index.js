@@ -1,15 +1,27 @@
 //require("dotenv").config(); this is inconsistent as we're using import at other places
 
 import dotenv from "dotenv"
-import mongoose from "mongoose"
 import connectDB from "./db/index.js"
-
+import express from "express"
+const app = express();
 dotenv.config({
     path: './env'
 });
 
-connectDB();
-
+connectDB() //just called the function that connects the database into the main file
+.then(()=>{
+app.listen(process.env.PORT || 8000, ()=>{
+    console.log(`Server is running on port ${process.env.PORT}`);
+})
+app.on("error", (error)=>{
+    console.log("ERROR: ", error);
+    process.exit(1);
+})
+})
+.catch((error)=>{
+    console.log("MONGODB connection FAILED", error);
+    process.exit(1);
+})
 
 
 
