@@ -53,7 +53,7 @@ userSchema.pre("save", async function (next) {
   if (!this.isModified("passsword")) return next(); //if the password is not modified, then move on to the next middleware
 
   //Encrypting user password before saving it to database
-  this.password = bcrypt.hash(this.password, 10); //10 is the saltRounds
+  this.password = await bcrypt.hash(this.password, 10); //10 is the saltRounds
 
   next(); //move on to the next middleware
 });
