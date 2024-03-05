@@ -18,7 +18,8 @@ const uploadOnCloudinary = async (localFilePath) => {
             resource_type: "auto", // read documentation to know more about this
         })  
         //file has been uploaded successfully
-        console.log("File uploaded successfully", response.url);
+        // console.log("File uploaded successfully", response.url);
+        fs.unlinkSync(localFilePath);       
         return response;
     } catch(error){
         fs.unlinkSync(localFilePath) // delete the file from the local storage, sync means 
@@ -27,6 +28,8 @@ const uploadOnCloudinary = async (localFilePath) => {
     }
 }
 
-cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
+cloudinary.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
   { public_id: "olympic_flag" }, 
   function(error, result) {console.log(result); });
+
+  export  {uploadOnCloudinary}
